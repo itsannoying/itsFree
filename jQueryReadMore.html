@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+		
+		$("#text").hide();
+ 
+	$("#readMore").click(function() {
+  
+    var elem = $("#readMore").text();
+	
+    if (elem == "Read Less") {
+      //Stuff to do when btn is in the read more state
+	  
+      $("#readMore").text("Read More");
+	 
+      $("#text").slideUp();
+    } else {
+      //Stuff to do when btn is in the read less state
+      $("#readMore").text("Read Less");
+      $("#text").slideDown();
+    }
+  });
+});
+
+</script>
+</head>
+<body bgcolor="cyan">
+<h1 align="center">What Is Twinkle?</h1>
+<div><center>Twinkle, twinkle, little star,<br/>
+How I wonder what you are.<br/>
+Up above the world so high,<br/>
+Like a diamond in the sky.<br/>
+Twinkle, twinkle, little star,<br/>
+How I wonder what you are!<br/>
+</div><br>
+<div id="text"><center>When the blazing sun is gone,<br/>
+When he nothing shines upon,<br/>
+Then you show your little light,<br/>
+Twinkle, twinkle, all the night.<br/>
+Twinkle, twinkle, little star,<br/>
+How I wonder what you are!<br/><br/>
+Then the traveler in the dark<br/>
+Thanks you for your tiny spark;<br/>
+How could he see where to go?<br/>
+If you did not twinkle so.<br/>
+Twinkle, twinkle, little star,<br/>
+How I wonder what you are!<br/><br/>
+
+In the dark blue sky you keep,<br/>
+While you through my window peep,<br/>
+And you never shut your eye,<br/>
+Till the sun is in the sky,<br/>
+Twinkle, twinkle, little star,<br/>
+How I wonder what you are!</span>
+</div>
+<br/>
+<div class="btn-container"><center>
+<button id="readMore">Read More</button>
+</div>
+</body>
+</html>
