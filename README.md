@@ -1,2 +1,2 @@
 # itsMine
-Mainly For Mphasis Training Project
+Mainly For Mphasis Training
