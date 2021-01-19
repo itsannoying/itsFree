@@ -1,0 +1,88 @@
+<html>
+<head>
+<script>
+function fun()
+{
+var x=document.f1.t5.value;  //sandip@gmail.c
+var atposition=x.indexOf("@");  //6
+var dotposition=x.lastIndexOf("."); //12 
+ var a=f1.t1.value;
+ var b=f1.t2.value;
+ var c=f1.t3.value;
+ var d=f1.t4.value;
+ var f=f1.t6.value;
+   if(a=="")
+   {
+   alert("rollno is empty");
+   f1.t1.focus();
+   }
+else if (isNaN(a)) //is not a number
+{
+alert("Please Enter a Number");
+ f1.t1.focus();
+  }
+else if (a == 0)
+{
+alert("The number is zero");
+ f1.t1.focus();
+  }   
+  else if(b=="")
+   {
+   alert("name is empty");
+   f1.t2.focus();
+   }
+    else if(c=="")
+   {
+   alert("address is empty");
+   f1.t3.focus();
+   }
+else if(d=="")
+   {   
+alert("phone no is empty");
+   f1.t4.focus(); 
+  }
+else if (isNaN(d)) //is not a number
+{
+alert("Please Enter a Number");
+ f1.t4.focus(); 
+ }
+else if(d.length != 10)
+{
+alert("Please Enter a Number 10 digits only");
+ f1.t4.focus();
+}
+  else if(f=="")
+   {   
+alert("Section is empty");
+   f1.t6.focus(); 
+  }
+else if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length)
+{  
+  alert("Please enter a valid e-mail address \n atposition:"+atposition+"\n dotposition:"+dotposition);  
+  f1.x.focus();
+  return false;  
+  } 
+else{
+alert("Data submitted successfullY");
+f1.submit();
+ } 
+  }
+</script>
+<body bgcolor="brown">
+<form name="f1" action=second.jsp method="post" >
+<h2 align=center color="red">JAVA SCRIPT</h2>
+<hr color=white>
+<table>
+<tr><td>Roll No.<td><input type="text" name=t1 size=20px></tr>
+<tr><td>Name<td><input type="text" name=t2 size=20px></tr>
+<tr><td>Address<td><input type="text" name=t3 size=20px></tr>
+<tr><td>Phone No.<td><input type="phone" name=t4 size=20px></tr>
+<tr><td>E-mail<td><input type="email" name=t5 size=20px></tr>
+<tr><td>Section<td><input type="text" name=t6 size=20px></tr>
+<tr><td><input type=button value=submit onClick='fun();'></tr>
+
+</table>
+</form>
+</body>
+</head>
+</html>
